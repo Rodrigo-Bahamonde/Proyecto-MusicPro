@@ -8,12 +8,10 @@
         ⮚	Bajos Cinco Cuerdas (IC-B-BCIC)
         ⮚	Bajos Activos (IC-B-BA)
         ⮚	Bajos Pasivos (IC-B-BP)
-
     ▪	Pianos (IC-P)
         ⮚	Piano de media cola (IC-P-PMC)
         ⮚	Piano de cola entera (IC-P-PCE)
         ⮚	Pianolas (IC-P-P)
-
 ●	Percusión (P)
     ▪	Baterías Acústicas (P-BA)
         ⮚	Tama (P-BA-T)
@@ -23,7 +21,6 @@
     ▪	Batería Electrónica (P-BE)
         ⮚	Roland (P-BE-R)
         ⮚	Alesis (P-BE-A)
-
 ●	Amplificadores (A)
     ▪	Cabezales (A-CAB)
         ⮚	ENGL (A-CAB-EN)
@@ -35,8 +32,6 @@
         ⮚	Marshall (A-CAJ-M)
         ⮚	Pavey (A-CAJ-P)
         ⮚	EVH (A-CAJ-EV)
-
-
 ●	Accesorios varios (AC)
     ▪	Audífonos (AC-A)
     ▪	Monitores (AC-MO)
