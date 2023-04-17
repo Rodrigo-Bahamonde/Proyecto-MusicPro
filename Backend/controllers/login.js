@@ -5,11 +5,10 @@ import { response, request } from 'express'
 //Iniciar sesion
 const loginPost = (req, res = response) => {
 
-    const { nombre, edad } = req.body;
+    const { email, contraseña } = req.body;
     res.json({
-        msg: 'inicio sesion',
-        nombre,
-        edad,
+        email,
+        contraseña
     })
 };
 
@@ -17,11 +16,11 @@ const loginPost = (req, res = response) => {
 const registroPost = (req = request, res = response) => {
 
     // const query = req.query;
-    const {api, nombre='no name'} = req.query;
+    const { email, password, nombre } = req.query;
 
     res.json({
-        msg: 'get API controller',
-        api,
+        email,
+        password,
         nombre
     })
 };

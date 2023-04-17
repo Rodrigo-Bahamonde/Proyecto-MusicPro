@@ -1,3 +1,10 @@
+Roles de usuario
+Cliente: 0
+Vendedor: 1
+Bodeguero: 2
+Contador: 3
+Administrador: 4
+
 #Clasificación de instrumentos
 
 ●	Instrumentos de Cuerdas (IC)
