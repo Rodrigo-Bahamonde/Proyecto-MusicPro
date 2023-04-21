@@ -1,5 +1,35 @@
 import { response, request } from 'express'
 
+const data =[
+    {
+        idPedido: 1,
+        direccion: "direccion 1",
+        fechaEntrega: "20-04-2023",
+        estado: true,
+        codBoleta: 12345678,
+    },
+    {
+        idPedido: 2,
+        direccion: "direccion 2",
+        fechaEntrega: "20-04-2023",
+        estado: true,
+        codBoleta: 12345678,
+    },
+    {
+        idPedido: 3,
+        direccion: "direccion 3",
+        fechaEntrega: "20-04-2023",
+        estado: true,
+        codBoleta: 12345678,
+    },
+    {
+        idPedido: 4,
+        direccion: "direccion 4",
+        fechaEntrega: "20-04-2023",
+        estado: true,
+        codBoleta: 12345678,
+    },
+]
 
 //Obtener estado de pedidos
 const pedidosGet = (req = request, res = response) => {
@@ -8,9 +38,7 @@ const pedidosGet = (req = request, res = response) => {
     const {api, nombre='no name'} = req.query;
 
     res.json({
-        msg: 'get API controller',
-        api,
-        nombre
+        data
     })
 };
 
