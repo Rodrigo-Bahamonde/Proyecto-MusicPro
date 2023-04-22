@@ -1,6 +1,6 @@
 import { response, request } from 'express'
 
-
+//mongodb+srv://user_node2:MYhqi3fEnqp8jPzU@micluster1.jxztl8z.mongodb.net/nodeDB
 
 //Iniciar sesion
 const loginPost = (req, res = response) => {

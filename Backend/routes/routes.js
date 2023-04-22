@@ -4,7 +4,7 @@ import { usuariosGet, usuariosPost, usuariosPut, usuariosDelete } from '../contr
 import { productosGet, productosPost, productosPut, productosDelete } from '../controllers/productos.js';
 import { pedidosGet, pedidosPost, pedidosPut, pedidosDelete } from '../controllers/pedidos.js';
 import { loginPost, registroPost } from '../controllers/login.js';
-import { informesVentasGet, ventasPost } from '../controllers/ventas.js';
+import { informesVentasGet, ventasGet, ventasPost } from '../controllers/ventas.js';
 
 const router = Router();
 
@@ -31,7 +31,8 @@ router.post('/login', loginPost);
 router.post('/registro', registroPost);
 
 //Ventas
-router.get('/ventas', ventasPost);
+router.get('/ventas', ventasGet);
+router.post('/ventas', ventasPost);
 router.get('/informes', informesVentasGet);
 
 export default router;
