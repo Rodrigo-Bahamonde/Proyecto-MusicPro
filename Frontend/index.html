@@ -12,20 +12,24 @@
 </head>
 
 <body>
-    <div class="offcanvas offcanvas-start bg-light" id="demo">
+    <div class="offcanvas offcanvas-start bg-dark" id="demo">
         <div class="offcanvas-header">
-            <h1 class="offcanvas-title">Categorías</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            <h1 class="offcanvas-title text-light">Categorías</h1>
+            <button type="button" class="btn m-0 p-0 rounded-circle bg-light" data-bs-dismiss="offcanvas">
+                <img class="p-2" height="30px" width="30px" src="./img/cerrar.png" />
+            </button>
         </div>
         <div class="offcanvas-body">
             <div id="accordion">
-                <div class="border rounded-top">
+                <div class="rounded-top">
                     <div class="border-bottom">
-                        <a class="link-basic d-flex ps-3 py-2" data-bs-toggle="collapse" href="#collapseOne">
-                            Instrumentos de cuerda
+                        <a class="link-basic d-flex ps-3 py-2 text-light" data-bs-toggle="collapse" href="#collapseOne">
+                            <p class="text-light m-0 p-0">
+                                Instrumentos de cuerda
+                            </p>
                         </a>
                     </div>
-                    <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
+                    <div id="collapseOne" class="collapse bg-light" data-bs-parent="#accordion">
                         <div class="card-body py-2">
                             <div class="row gap-2 m-0">
                                 <a class="link-basic link-item ps-5" href="#">Guitarras</a>
@@ -35,29 +39,33 @@
                         </div>
                     </div>
                 </div>
-                <div class="border">
+                <div class="">
                     <div class="border-bottom">
                         <a class="link-basic d-flex ps-3 py-2" data-bs-toggle="collapse" href="#collapseTwo">
-                            Accesorios
+                            <p class="text-light m-0 p-0">
+                                Accesorios
+                            </p>
                         </a>
                     </div>
-                    <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                    <div id="collapseTwo" class="collapse bg-light" data-bs-parent="#accordion">
                         <div class="card-body py-2">
                             <div class="row gap-2 m-0">
-                                <a class="link-basic link-item ps-5" href="#">Guitarras</a>
+                                <a class="link-basic link-item ps-5 text-light" href="#">Guitarras</a>
                                 <a class="link-basic link-item ps-5" href="#">Bajos</a>
                                 <a class="link-basic link-item ps-5" href="#">Pianos</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="border">
+                <div class="">
                     <div class="border-bottom">
                         <a class="link-basic d-flex ps-3 py-2" data-bs-toggle="collapse" href="#collapseThree">
-                            Amplificadores
+                            <p class="text-light m-0 p-0">
+                                Amplificadores
+                            </p>
                         </a>
                     </div>
-                    <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                    <div id="collapseThree" class="collapse bg-light" data-bs-parent="#accordion">
                         <div class="card-body py-2">
                             <div class="row gap-2 m-0">
                                 <a class="link-basic link-item ps-5" href="#">Guitarras</a>
@@ -67,13 +75,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="border rounded-bottom">
-                    <div class="border-bottom">
+                <div class="">
+                    <div class="">
                         <a class="link-basic d-flex ps-3 py-2" data-bs-toggle="collapse" href="#collapseFour">
-                            Percusión
+                            <p class="text-light m-0 p-0">
+                                Percusión
+                            </p>
                         </a>
                     </div>
-                    <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                    <div id="collapseFour" class="collapse bg-light" data-bs-parent="#accordion">
                         <div class="card-body py-2">
                             <div class="row gap-2 m-0">
                                 <a class="link-basic link-item ps-5" href="#">Guitarras</a>
@@ -91,7 +101,7 @@
             <!--Nav-->
             <div class="d-flex justify-content-between row">
                 <div class="col-8 flex-fill row">
-                    <div class="col-2">
+                    <div class="col-2 my-2">
                         <a class="" href="#">
                             <img height="100px" width="100px" style="border-radius: 100px;" src="./img/logo.png" />
                         </a>
@@ -122,20 +132,141 @@
         </div>
     </div>
     <!--Body-->
-    <div class="container">
-
+    <div class="container px-5 my-5">
+        <div class="row justify-content-between container p-0">
+            <div class="card rounded-4" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between container p-0 my-3">
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between container p-0 my-3">
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="card" style="width:350px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">John Doe</h4>
+                    <p class="card-text">Some example text.</p>
+                    <button href="#" class="btn btn-link link-basic">
+                        <div class="d-flex align-items-center">
+                            <img height="auto" width="10%" src="./img/comprar.png" />
+                            <p class="ms-2 mb-1">Agregar al carrito</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
     <!--Footer-->
     <div class="bg-light py-2">
         <div class="container">
-            <!--Nav-->
             <div class="d-flex justify-content-between row">
                 <div class="col-4 flex-fill row align-items-center">
-                    <div class="col-4">
+                    <div class="col-4 mt-2">
                         <a class="" href="#">
                             <img height="100px" width="100px" style="border-radius: 100px;" src="./img/logo.png" />
                         </a>
-                        <div style="height: 200px;">
+                        <div style="height: 100px;">
 
                         </div>
                     </div>
@@ -143,23 +274,36 @@
                         <div>
 
                             <h1>Music Pro</h1>
-                            <div style="height: 200px;">
+                            <div style="height: 100px;">
 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-8 d-flex align-items-center justify-content-between">
-                    <div class="">
+                <div class="col-8 d-flex align-items-center">
+                    <div class="col-5">
                         <h1 class="">Encuentranos</h1>
-                        <div style="height: 200px;">
-
+                        <div class="align-items-center d-flex" style="height: 100px;">
+                            <p>Estamos ubicados en ....</p>
                         </div>
                     </div>
-                    <div>
+                    <div class="col-5">
                         <h1>Síguenos</h1>
-                        <div style="height: 200px;">
-
+                        <div class="align-items-center d-flex gap-2" style="height: 100px;">
+                            <a class="" href="#">
+                                <img height="40px" width="40px" style="border-radius: 100px;"
+                                    src="./img/facebook.png" />
+                            </a>
+                            <a class="" href="#">
+                                <img height="40px" width="40px" style="border-radius: 100px;"
+                                    src="./img/instagram.png" />
+                            </a>
+                            <a class="" href="#">
+                                <img height="40px" width="40px" style="border-radius: 100px;" src="./img/tik-tok.png" />
+                            </a>
+                            <a class="" href="#">
+                                <img height="40px" width="40px" style="border-radius: 100px;" src="./img/twitter.png" />
+                            </a>
                         </div>
                     </div>
                 </div>
