@@ -22,7 +22,7 @@ const registroPost = (req = request, res = response) => {
         email,
         password,
         nombre
-    })
+    }) 
 };
 
 
