@@ -1,122 +1,163 @@
 import { response, request } from 'express'
+import Producto from '../models/producto.js'
 
-const data =[
-    {
-        idProducto: "1",
-        categoria: "IC-G-GCS",
-        marca: "Ibanez",
-        precio: 100000,
-        nombreProducto: "Guitarra acustica",
-        descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
-        imagen: "imagen1",
-        stock: 100,
-    },
-    {
-        idProducto: "1",
-        categoria: "IC-G-GCS",
-        marca: "Ibanez",
-        precio: 100000,
-        nombreProducto: "Guitarra acustica",
-        descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
-        imagen: "imagen1",
-        stock: 100,
-    },
-    {
-        idProducto: "1",
-        categoria: "IC-G-GCS",
-        marca: "Ibanez",
-        precio: 100000,
-        nombreProducto: "Guitarra acustica",
-        descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
-        imagen: "imagen1",
-        stock: 100,
-    },
-    {
-        idProducto: "1",
-        categoria: "IC-G-GCS",
-        marca: "Ibanez",
-        precio: 100000,
-        nombreProducto: "Guitarra acustica",
-        descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
-        imagen: "imagen1",
-        stock: 100,
-    },
-    {
-        idProducto: "1",
-        categoria: "IC-G-GCS",
-        marca: "Ibanez",
-        precio: 100000,
-        nombreProducto: "Guitarra acustica",
-        descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
-        imagen: "imagen1",
-        stock: 100,
-    },
-]
+
+// const data = [
+//     {
+//         idProducto: "1",
+//         categoria: "IC-G-GCS",
+//         marca: "Ibanez",
+//         precio: 100000,
+//         nombreProducto: "Guitarra acustica",
+//         descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
+//         imagen: "imagen1",
+//         stock: 100,
+//     },
+//     {
+//         idProducto: "1",
+//         categoria: "IC-G-GCS",
+//         marca: "Ibanez",
+//         precio: 100000,
+//         nombreProducto: "Guitarra acustica",
+//         descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
+//         imagen: "imagen1",
+//         stock: 100,
+//     },
+//     {
+//         idProducto: "1",
+//         categoria: "IC-G-GCS",
+//         marca: "Ibanez",
+//         precio: 100000,
+//         nombreProducto: "Guitarra acustica",
+//         descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
+//         imagen: "imagen1",
+//         stock: 100,
+//     },
+//     {
+//         idProducto: "1",
+//         categoria: "IC-G-GCS",
+//         marca: "Ibanez",
+//         precio: 100000,
+//         nombreProducto: "Guitarra acustica",
+//         descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
+//         imagen: "imagen1",
+//         stock: 100,
+//     },
+//     {
+//         idProducto: "1",
+//         categoria: "IC-G-GCS",
+//         marca: "Ibanez",
+//         precio: 100000,
+//         nombreProducto: "Guitarra acustica",
+//         descripcion: "Da tus primeros pasos y descubre el amor por la música con nuestra excelente guitarra clásica de 39 pulgadas color natural, ideal para principiantes gracias a su gran calidad. Divierte creando y aprendiendo con el instrumento de cuerdas más popular del mercado. (cuerdas de nylon incluidas).",
+//         imagen: "imagen1",
+//         stock: 100,
+//     },
+// ]
 
 
 //Obtener productos
-const productosGet = (req = request, res = response) => {
+const productosGet = async (req = request, res = response) => {
 
+    // const { limite = 10, desde = 0 } = req.query;
     //Obtener productos de base de datos
+    const productos = await Producto.find()
+        // .skip(Number(desde))
+        // .limit(Number(limite))
 
     //Mostrar estado del producto segun stock
 
-    // const query = req.query;
-    // const {api, nombre='no name'} = req.query;
 
     res.json({
-        data
+        productos
+    })
+};
+
+//Obtener producto por id
+const productoGet = async (req = request, res = response) => {
+
+    const idProducto = req.params.id
+
+    //Obtener producto de base de datos
+    const producto = await Producto.findById(idProducto)
+
+    res.json({
+        producto
+    })
+};
+
+//Obtener producto por categoria
+const productosCategoriaGet = async (req = request, res = response) => {
+
+    const { limite = 10, desde = 0 } = req.query;
+    const { categoria } = req.params
+    //Obtener producto de base de datos
+    const productos = await Producto.find({ categoria })
+        .skip(Number(desde))
+        .limit(Number(limite))
+
+    //Mostrar estado del producto segun stock
+
+    res.json({
+        productos
     })
 };
 
 //Ingresar un nuevo producto
-const productosPost = (req = request, res = response) => {
+const productosPost = async (req = request, res = response) => {
+
+    const body = req.body;
+    const producto = new Producto(body);
 
     //Validar que al agregar un producto solo sea administrador o vendedor
 
 
     //Guardar en base de datos
+    await producto.save();
 
-
-    const { idProducto, categoria, marca, precio, imagen } = req.body;
     res.json({
-        idProducto,
-        categoria,
-        marca,
-        precio,
-        imagen
+        producto
     })
 };
 
 //Actualizar un producto
-const productosPut = (req = request, res = response) => {
+const productosPut = async (req = request, res = response) => {
+
+    const idProducto = req.params.id
+    const { categroia, marca, precio, imagen, stock, descripcion, nombreProducto, estado } = req.body
+
+    const productoActualizado = { categroia, marca, precio, imagen, stock, descripcion, nombreProducto, estado };
+
+    //Obtener producto de base de datos
+    const productoFinal = await Producto.findByIdAndUpdate(idProducto, productoActualizado, { new: true });
+
 
     //Validar que cambios sean de parte de admin y vendedor
-
-
-    const { idProducto, categoria, marca, precio, imagen } = req.body;
     res.json({
-        idProducto,
-        categoria,
-        marca,
-        precio,
-        imagen
+        msg: 'Producto actualizado',
+        producto: productoFinal
     })
 };
 
 //Desactivar un producto (deshabilitar)
-const productosDelete = (req = request, res = response) => {
+const productosDelete = async (req = request, res = response) => {
 
-    const { idProducto } = req.body;
+    const idProducto = req.params.id
+
+    const productoEliminado = await Producto.findByIdAndUpdate({ _id: idProducto }, { estado: false }, { new: true });
+
+
 
     res.json({
-        idProducto
+        msg: 'Producto eliminado'
     })
 };
 
 
 export {
     productosGet,
+    productosCategoriaGet,
+    productoGet,
     productosPost,
     productosPut,
     productosDelete,
